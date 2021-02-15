@@ -1,26 +1,34 @@
-#root {
-  background-color: black;
-}
-.container {
+#logo-and-lines-container {
+  /* overflow: hidden; */
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.logo {
-  width: 18%;
+#logo {
+  display: inline-block;
+  width: 19%;
   z-index: 10;
+  transform: skew(0deg);
 }
 .line {
   position: absolute;
   transform-origin: center;
-  height: 8px;
-  width: 23%;
 }
-
-@media (min-width: 600px) {
-  body {
-    background-color: lightblue;
-  }
+.background-img {
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+#chyron {
+  position: absolute;
+  top: 87%;
+  width: 100vw;
+  height: 10%;
+  background-color: black;
+  background-image: url('https://lite-images-i.scdn.co/image/ab67616d00001e023a364abd3772e6bca53b5ccd');
+  background-size: cover;
 }
