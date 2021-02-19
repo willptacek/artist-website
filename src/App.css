@@ -41,20 +41,25 @@
 }
 .button {
   display: flex;
-  background-image: url('./components/img/test.jpg');
-}
-#button1 {
-  background-image: url('./components/img/mimibutton1.webp');
-}
-#button2 {
-  background-image: url('./components/img/mimibutton2.webp');
 }
 .button .icon {
-  color: white;
-  stroke: black;
+  color: rgb(254, 230, 0);
   stroke-width: 15;
   font-size: 3vw;
   margin: 1rem;
+  margin-bottom: 2rem;
+}
+.button-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+  text-shadow: 1px 1px black;
+  color: rgb(254, 230, 0);
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .icon:nth-child(even):hover {
   transform: skew(-30deg);
@@ -72,8 +77,17 @@
     margin: 1rem;
   }
   /* TODO: Make this slightly vary */
-  .flex #logo-and-lines-container .line {
+  .flex #logo-and-lines-container .line:nth-child(3n + 3) {
     width: 60vw !important;
+    height: 4px !important;
+  }
+  .flex #logo-and-lines-container .line:nth-child(2n + 2) {
+    width: 65vw !important;
+    height: 2px !important;
+  }
+  .flex #logo-and-lines-container .line:nth-child(5n + 5) {
+    width: 70vw !important;
+    height: 2px !important;
   }
   #logo {
     width: 90%;

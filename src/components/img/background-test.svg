@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362 112.08"><filter id="pixelate" x="0" y="0">
+    <feFlood x="4" y="4" height="2" width="2"/>
+    
+    <feComposite width="10" height="10"/>
+    
+    <feTile result="a"/>
+    
+    <feComposite in="SourceGraphic" in2="a" 
+                 operator="in"/>
+    
+    <feMorphology operator="dilate"
+                  radius="5"/>
+  </filter><defs><style>.cls-1{fill:#1a0129;}.cls-2{fill:#85458a;}.cls-3{fill:silver;}.positive{filter: invert(50%);font-size: 100px; transform: skew(100deg)}.negative{font-size: 500px;transform: skew(-130deg)} .moderation{font-size: 100px; transform:skew(50deg)}</style></defs><text x="120" y="50" class="positive cls-1">mimideath</text><text x="120" y="90" class="positive cls-2">mimideath</text><text x="60" y="50" filter="url(#pixelate)" class="negative cls-2">mimideath</text><text x="60" y="80" class="negative cls-3">mimideath</text><text x="15" y="40" class="negative cls-2">mimideath</text><text x="70" y="90" class="negative cls-1">mimideath</text><text x="70" y="90" class="moderation cls-3">mimideath</text></svg>

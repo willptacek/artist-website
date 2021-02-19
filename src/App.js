@@ -26,13 +26,13 @@ import image7 from './components/img/mimibackgroundphotos/7.webp';
 import image8 from './components/img/mimibackgroundphotos/8.webp';
 import image9 from './components/img/mimibackgroundphotos/9.webp';
 import image10 from './components/img/mimibackgroundphotos/10.webp';
-import image11 from './components/img/mimibackgroundphotos/11.webp';
+import image11 from './components/img/buttonbackgroundtest2.webp';
 import image12 from './components/img/mimibackgroundphotos/12.webp';
 import image13 from './components/img/mimibackgroundphotos/13.webp';
 import image14 from './components/img/mimibackgroundphotos/14.webp';
 import image15 from './components/img/mimibackgroundphotos/15.webp';
 import image16 from './components/img/mimibackgroundphotos/16.webp';
-import image17 from './components/img/mimibackgroundphotos/17.webp';
+import image17 from './components/img/buttonbackgroundtest.webp';
 import image18 from './components/img/mimibackgroundphotos/18.webp';
 import image19 from './components/img/mimibackgroundphotos/19.webp';
 import image20 from './components/img/mimibackgroundphotos/20.webp';
@@ -66,7 +66,7 @@ function getRandomFloat(min, max) {
 //which will then be mapped into Image.js in background.
 //'#1a0129', '#85458a', '#C0C0C0'
 //** IDEA - MAYBE MAKE AN API LIKE THIS LOLZ **/
-function generateStyles(amountOfImages) {
+function generateStyles(amountOfImages, button) {
   let keys = new Array();
   let styles = new Array();
   let style = { color: '' };
@@ -75,61 +75,70 @@ function generateStyles(amountOfImages) {
   }
   for (let i = 0; i < amountOfImages; i++) {
     //todo: reconfigure into object
-    switch (keys[i]) {
-      case 1:
-        //#85458a
-        // styleString = styles.push(
-        //   'invert(33%) sepia(19%) saturate(1941%) hue-rotate(248deg) brightness(90%) contrast(81%)'
-        // );
-        style = {
-          filter:
-            'invert(33%) sepia(19%) saturate(1941%) hue-rotate(248deg) brightness(90%) contrast(81%) blur(8px)',
-          top: getRandomFloat(-10, -5) + '%',
-          left: getRandomFloat(-10, 20) + '%',
-          height: getRandomFloat(100, 130) + '%',
-          width: getRandomFloat(30, 40) + '%',
-          imageRendering: 'pixelated',
-        };
-        break;
-      case 2:
-        //#C0C0C0
-        style = {
-          filter:
-            'invert(0%) sepia(65%) saturate(4266%) hue-rotate(262deg) brightness(105%) contrast(103%) blur(5px)',
-          top: getRandomFloat(-10, 30) + '%',
-          left: getRandomFloat(25, 45) + '%',
-          height: getRandomFloat(60, 70) + '%',
-          width: getRandomFloat(100, 150) + '%',
-          imageRendering: 'pixelated',
-        };
-        break;
-      case 3:
-        //#1a0129
-        style = {
-          filter:
-            'invert(3%) sepia(73%) saturate(4366%) hue-rotate(273deg) brightness(96%) contrast(104%) blur(8px)',
-          top: getRandomFloat(50, 60) + '%',
-          left: getRandomFloat(-60, 20) + '%',
-          height: getRandomFloat(20, 70) + '%',
-          width: getRandomFloat(120, 180) + '%',
-          imageRendering: 'pixelated',
-        };
-        break;
-      case 4:
-        //#c0a2c4
-        style = {
-          filter:
-            'invert(78%) sepia(24%) saturate(304%) hue-rotate(246deg) brightness(84%) contrast(88%) blur(11px)',
-          top: getRandomFloat(75, 100) + '%',
-          left: getRandomFloat(75, 100) + '%',
-          height: getRandomFloat(50, 60) + '%',
-          width: getRandomFloat(10, 20) + '%',
-          imageRendering: 'pixelated',
-        };
-        break;
-      default:
-        break;
+    if (button) {
+      style = {
+        filter:
+          'invert(0%) sepia(55%) saturate(4266%) hue-rotate(262deg) brightness(105%) contrast(103%)',
+        imageRendering: 'pixelated',
+      };
+    } else {
+      switch (keys[i]) {
+        case 1:
+          //#85458a
+          // styleString = styles.push(
+          //   'invert(33%) sepia(19%) saturate(1941%) hue-rotate(248deg) brightness(90%) contrast(81%)'
+          // );
+          style = {
+            filter:
+              'invert(33%) sepia(19%) saturate(1941%) hue-rotate(248deg) brightness(90%) contrast(81%) blur(8px)',
+            top: getRandomFloat(-10, -5) + '%',
+            left: getRandomFloat(-10, 20) + '%',
+            height: getRandomFloat(100, 130) + '%',
+            width: getRandomFloat(30, 40) + '%',
+            imageRendering: 'pixelated',
+          };
+          break;
+        case 2:
+          //#C0C0C0
+          style = {
+            filter:
+              'invert(0%) sepia(65%) saturate(4266%) hue-rotate(262deg) brightness(105%) contrast(103%) blur(5px)',
+            top: getRandomFloat(-10, 30) + '%',
+            left: getRandomFloat(25, 45) + '%',
+            height: getRandomFloat(60, 70) + '%',
+            width: getRandomFloat(100, 150) + '%',
+            imageRendering: 'pixelated',
+          };
+          break;
+        case 3:
+          //#1a0129
+          style = {
+            filter:
+              'invert(3%) sepia(73%) saturate(4366%) hue-rotate(273deg) brightness(96%) contrast(104%) blur(8px)',
+            top: getRandomFloat(50, 60) + '%',
+            left: getRandomFloat(-60, 20) + '%',
+            height: getRandomFloat(20, 70) + '%',
+            width: getRandomFloat(120, 180) + '%',
+            imageRendering: 'pixelated',
+          };
+          break;
+        case 4:
+          //#c0a2c4
+          style = {
+            filter:
+              'invert(78%) sepia(24%) saturate(304%) hue-rotate(246deg) brightness(84%) contrast(88%) blur(11px)',
+            top: getRandomFloat(75, 100) + '%',
+            left: getRandomFloat(75, 100) + '%',
+            height: getRandomFloat(50, 60) + '%',
+            width: getRandomFloat(10, 20) + '%',
+            imageRendering: 'pixelated',
+          };
+          break;
+        default:
+          break;
+      }
     }
+
     styles.push(style);
   }
   return styles;
@@ -212,11 +221,11 @@ function populateManipulatedLineArray(initial) {
 //function that manipulates the lines in the center of the screen, based on the clientX value.
 //can be improved on definitely.
 let moveLines = (e) => {
-  let logoX = e.clientX % 250;
+  let logoX = e.clientX % 250; //e.clientX % 250
   let arrayOfLines = populateManipulatedLineArray(logoX);
   try {
     for (let i = 0; i < arrayOfLines.length; i++) {
-      arrayOfLines[i].style.width = getRandomFloat(28, 32) + 'vw'; ///28,32
+      arrayOfLines[i].style.width = getRandomFloat(25, 35) + 'vw'; ///28,32
     }
   } catch (err) {
     // :/
@@ -229,7 +238,7 @@ function glitchAngel() {
   //change to set interval
   setInterval(function () {
     let angel = document.getElementById('logo');
-    let probability = getRandomInt(10); //0 - 100
+    let probability = getRandomInt(30); //0 - 100
     if (probability === 5) {
       let randomSkew = getRandomFloat(-20, 20);
       //there are weird errors that occur sometimes with this function, mostly on angel.style.transform=skew the first time.  not exactly why this is happening, but they are pretty inconsequential.  so i'm just catching them for now
@@ -286,7 +295,8 @@ class App extends Component {
       linesArray: populateLineArray(),
       imageArray: populateImageArray(),
       stylesArray: generateStyles(25),
-      buttonImages: [image1, image2],
+      buttonImages: [`url(${image11})`, `url(${image17})`],
+      buttonText: ['listen', 'socials'],
       buttonArray1: [
         {
           icon: faSpotify,
@@ -312,11 +322,11 @@ class App extends Component {
       buttonArray2: [
         {
           icon: faTwitter,
-          link: 'https://open.spotify.com/artist/55VDe291360aWSrwt1U96m',
+          link: 'https://twitter.com/MIMIDEATHH',
         },
         {
           icon: faInstagram,
-          link: 'https://soundcloud.com/mimideathh',
+          link: 'https://www.instagram.com/mimideathh/?hl=en',
         },
         {
           icon: faYoutube,
@@ -324,7 +334,7 @@ class App extends Component {
         },
         {
           icon: faEnvelope,
-          link: 'https://music.apple.com/us/artist/mimideath/1502867449',
+          link: 'mailto:mgmtmimi@gmail.com',
         },
       ],
     };
@@ -341,6 +351,8 @@ class App extends Component {
             buttonArray={this.state.buttonArray1}
             className="button"
             id="button1"
+            image={this.state.buttonImages[0]}
+            text={this.state.buttonText[0]}
           />
           <Logo
             lines={this.state.linesArray}
@@ -352,6 +364,8 @@ class App extends Component {
             buttonArray={this.state.buttonArray2}
             className="button"
             id="button2"
+            image={this.state.buttonImages[1]}
+            text={this.state.buttonText[1]}
           />
         </div>
         <Background
