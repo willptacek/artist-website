@@ -1,16 +1,21 @@
-#logo-and-lines-container {
-  /* overflow: hidden; */
+.flex {
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+#logo-and-lines-container {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #logo {
-  display: inline-block;
-  width: 19%;
+  display: block;
+  width: 45%;
   z-index: 10;
-  transform: skew(0deg);
 }
 .line {
   position: absolute;
@@ -23,7 +28,9 @@
   left: 0;
   display: inline-block;
 }
+/* have mimi loves: off center to the left, then a looping of the stuff she loves in the middle */
 #chyron {
+  display: none;
   position: absolute;
   top: 87%;
   width: 100vw;
@@ -31,4 +38,44 @@
   background-color: black;
   background-image: url('https://lite-images-i.scdn.co/image/ab67616d00001e023a364abd3772e6bca53b5ccd');
   background-size: cover;
+}
+.button {
+  display: flex;
+  background-image: url('./components/img/test.jpg');
+}
+#button1 {
+  background-image: url('./components/img/mimibutton1.webp');
+}
+#button2 {
+  background-image: url('./components/img/mimibutton2.webp');
+}
+.button .icon {
+  color: white;
+  stroke: black;
+  stroke-width: 15;
+  font-size: 3vw;
+  margin: 1rem;
+}
+.icon:nth-child(even):hover {
+  transform: skew(-30deg);
+}
+.icon:nth-child(odd):hover {
+  transform: skew(30deg);
+}
+
+@media all and (max-width: 897px) {
+  .flex {
+    flex-direction: column;
+  }
+  .button .icon {
+    font-size: 10vw;
+    margin: 1rem;
+  }
+  /* TODO: Make this slightly vary */
+  .flex #logo-and-lines-container .line {
+    width: 60vw !important;
+  }
+  #logo {
+    width: 90%;
+  }
 }

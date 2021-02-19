@@ -9,7 +9,7 @@ export class Line extends Component {
         style={{
           backgroundColor: this.props.color,
           transform: 'rotate(' + this.props.angle + 'deg)',
-          width: this.props.length + '%',
+          width: this.props.length + 'vw',
           height: this.props.height + 'px',
         }}
       ></div>

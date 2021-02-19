@@ -10,7 +10,7 @@ import Angel from '../Layout/Angel';
 export class Logo extends Component {
   render() {
     return (
-      <div id="logo-and-lines-container" onMouseMove={this.props.moveLines}>
+      <div id="logo-and-lines-container">
         <Angel glitchAngel={this.props.glitchAngel} />
         {this.props.lines.map((lineProperties) => (
           <Line

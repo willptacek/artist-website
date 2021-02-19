@@ -1,34 +1,46 @@
 import Logo from './components/Layout/Logo';
 import Background from './components/Layout/Background';
 import Chyron from './components/Layout/Chyron';
+import Button from './components/Layout/Button';
 import './App.css';
 import { Component, Fragment } from 'react';
+import {
+  faSpotify,
+  faSoundcloud,
+  faYoutube,
+  faApple,
+  faBandcamp,
+  faDeezer,
+  faTwitter,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 //this sucks LOL but i cant figure out how to do it dynamically because of some weird react thing soo.... xD
-import image1 from './components/img/mimibackgroundphotos/1.png';
-import image2 from './components/img/mimibackgroundphotos/2.png';
-import image3 from './components/img/mimibackgroundphotos/3.png';
-import image4 from './components/img/mimibackgroundphotos/4.png';
-import image5 from './components/img/mimibackgroundphotos/5.png';
-import image6 from './components/img/mimibackgroundphotos/6.png';
-import image7 from './components/img/mimibackgroundphotos/7.png';
-import image8 from './components/img/mimibackgroundphotos/8.png';
-import image9 from './components/img/mimibackgroundphotos/9.png';
-import image10 from './components/img/mimibackgroundphotos/10.png';
-import image11 from './components/img/mimibackgroundphotos/11.png';
-import image12 from './components/img/mimibackgroundphotos/12.png';
-import image13 from './components/img/mimibackgroundphotos/13.png';
-import image14 from './components/img/mimibackgroundphotos/14.png';
-import image15 from './components/img/mimibackgroundphotos/15.png';
-import image16 from './components/img/mimibackgroundphotos/16.png';
-import image17 from './components/img/mimibackgroundphotos/17.png';
-import image18 from './components/img/mimibackgroundphotos/18.png';
-import image19 from './components/img/mimibackgroundphotos/19.png';
-import image20 from './components/img/mimibackgroundphotos/20.png';
-import image21 from './components/img/mimibackgroundphotos/21.png';
-import image22 from './components/img/mimibackgroundphotos/22.png';
-import image23 from './components/img/mimibackgroundphotos/23.png';
-import image24 from './components/img/mimibackgroundphotos/24.png';
-import image25 from './components/img/mimibackgroundphotos/25.png';
+import image1 from './components/img/mimibackgroundphotos/1.webp';
+import image2 from './components/img/mimibackgroundphotos/2.webp';
+import image3 from './components/img/mimibackgroundphotos/3.webp';
+import image4 from './components/img/mimibackgroundphotos/4.webp';
+import image5 from './components/img/mimibackgroundphotos/5.webp';
+import image6 from './components/img/mimibackgroundphotos/6.webp';
+import image7 from './components/img/mimibackgroundphotos/7.webp';
+import image8 from './components/img/mimibackgroundphotos/8.webp';
+import image9 from './components/img/mimibackgroundphotos/9.webp';
+import image10 from './components/img/mimibackgroundphotos/10.webp';
+import image11 from './components/img/mimibackgroundphotos/11.webp';
+import image12 from './components/img/mimibackgroundphotos/12.webp';
+import image13 from './components/img/mimibackgroundphotos/13.webp';
+import image14 from './components/img/mimibackgroundphotos/14.webp';
+import image15 from './components/img/mimibackgroundphotos/15.webp';
+import image16 from './components/img/mimibackgroundphotos/16.webp';
+import image17 from './components/img/mimibackgroundphotos/17.webp';
+import image18 from './components/img/mimibackgroundphotos/18.webp';
+import image19 from './components/img/mimibackgroundphotos/19.webp';
+import image20 from './components/img/mimibackgroundphotos/20.webp';
+import image21 from './components/img/mimibackgroundphotos/21.webp';
+import image22 from './components/img/mimibackgroundphotos/22.webp';
+import image23 from './components/img/mimibackgroundphotos/23.webp';
+import image24 from './components/img/mimibackgroundphotos/24.webp';
+import image25 from './components/img/mimibackgroundphotos/25.webp';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -37,6 +49,14 @@ function getRandomInt(max) {
 function getRandomFloat(min, max) {
   return Math.random() * (max - min) + min;
 }
+
+// function generateButtonImages(backgroundImageArray) {
+//   let buttonImageArray = new Array();
+//   for (let i = 0; i < 2; i++) {
+//     buttonImageArray.push(backgroundImageArray[getRandomInt(2)]);
+//   }
+//   return buttonImageArray;
+// }
 
 //generateStyles returns an array with a length of amountOfImages; within this array will be different
 //randomly generated styling for the background images of the site.
@@ -196,7 +216,7 @@ let moveLines = (e) => {
   let arrayOfLines = populateManipulatedLineArray(logoX);
   try {
     for (let i = 0; i < arrayOfLines.length; i++) {
-      arrayOfLines[i].style.width = getRandomFloat(28, 32) + '%';
+      arrayOfLines[i].style.width = getRandomFloat(28, 32) + 'vw'; ///28,32
     }
   } catch (err) {
     // :/
@@ -209,7 +229,7 @@ function glitchAngel() {
   //change to set interval
   setInterval(function () {
     let angel = document.getElementById('logo');
-    let probability = getRandomInt(20); //0 - 100
+    let probability = getRandomInt(10); //0 - 100
     if (probability === 5) {
       let randomSkew = getRandomFloat(-20, 20);
       //there are weird errors that occur sometimes with this function, mostly on angel.style.transform=skew the first time.  not exactly why this is happening, but they are pretty inconsequential.  so i'm just catching them for now
@@ -266,7 +286,49 @@ class App extends Component {
       linesArray: populateLineArray(),
       imageArray: populateImageArray(),
       stylesArray: generateStyles(25),
+      buttonImages: [image1, image2],
+      buttonArray1: [
+        {
+          icon: faSpotify,
+          link: 'https://open.spotify.com/artist/55VDe291360aWSrwt1U96m',
+        },
+        {
+          icon: faSoundcloud,
+          link: 'https://soundcloud.com/mimideathh',
+        },
+        {
+          icon: faBandcamp,
+          link: 'https://mimideath.bandcamp.com/',
+        },
+        {
+          icon: faApple,
+          link: 'https://music.apple.com/us/artist/mimideath/1502867449',
+        },
+        // {
+        //   icon: faDeezer,
+        //   link: 'https://www.deezer.com/us/artist/88404592',
+        // },
+      ],
+      buttonArray2: [
+        {
+          icon: faTwitter,
+          link: 'https://open.spotify.com/artist/55VDe291360aWSrwt1U96m',
+        },
+        {
+          icon: faInstagram,
+          link: 'https://soundcloud.com/mimideathh',
+        },
+        {
+          icon: faYoutube,
+          link: 'https://www.youtube.com/channel/UC0keS6HcpWxhpsxPBWs7tWg',
+        },
+        {
+          icon: faEnvelope,
+          link: 'https://music.apple.com/us/artist/mimideath/1502867449',
+        },
+      ],
     };
+
     this.getRandomFloat = getRandomFloat;
     this.moveLines = moveLines;
     this.glitchAngel = glitchAngel;
@@ -274,12 +336,24 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Logo
-          lines={this.state.linesArray}
-          getRandomFloat={this.getRandomFloat}
-          moveLines={this.moveLines}
-          glitchAngel={this.glitchAngel}
-        />
+        <div className="flex" onMouseMove={this.moveLines}>
+          <Button
+            buttonArray={this.state.buttonArray1}
+            className="button"
+            id="button1"
+          />
+          <Logo
+            lines={this.state.linesArray}
+            getRandomFloat={this.getRandomFloat}
+            moveLines={this.moveLines}
+            glitchAngel={this.glitchAngel}
+          />
+          <Button
+            buttonArray={this.state.buttonArray2}
+            className="button"
+            id="button2"
+          />
+        </div>
         <Background
           images={this.state.imageArray}
           getRandomFloat={this.getRandomFloat}
