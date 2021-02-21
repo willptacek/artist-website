@@ -1,6 +1,6 @@
 {
-  "homepage": "http://willptacek.github.io/mimideath/",
-  "name": "mimideath",
+  "homepage": "http://willptacek.github.io/artist-website/",
+  "name": "artist-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
