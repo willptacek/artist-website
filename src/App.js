@@ -2,6 +2,7 @@ import Logo from './components/Layout/Logo';
 import Background from './components/Layout/Background';
 import Chyron from './components/Layout/Chyron';
 import Button from './components/Layout/Button';
+import Title from './components/Layout/Title';
 import './App.css';
 import { Component, Fragment } from 'react';
 import {
@@ -31,7 +32,6 @@ import image12 from './components/img/mimibackgroundphotos/12.webp';
 import image13 from './components/img/mimibackgroundphotos/13.webp';
 import image14 from './components/img/mimibackgroundphotos/14.webp';
 import image15 from './components/img/mimibackgroundphotos/15.webp';
-import image16 from './components/img/mimibackgroundphotos/16.webp';
 import image17 from './components/img/buttonbackgroundtest.webp';
 import image18 from './components/img/mimibackgroundphotos/18.webp';
 import image19 from './components/img/mimibackgroundphotos/19.webp';
@@ -167,7 +167,6 @@ function populateArrayWithImageFileNames(amountOfImages) {
     image13,
     image14,
     image15,
-    image16,
     image17,
     image18,
     image19,
@@ -198,6 +197,13 @@ function populateImageArray() {
   let fileNames = populateArrayWithImageFileNames(amountOfImages);
   for (let i = 0; i < amountOfImages; i++) {
     imageArray.push(fileNames[i]);
+  }
+  //shuffle array
+  for (let i = imageArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * i);
+    const temp = imageArray[i];
+    imageArray[i] = imageArray[j];
+    imageArray[j] = temp;
   }
   return imageArray;
 }
@@ -230,6 +236,13 @@ let moveLines = (e) => {
   } catch (err) {
     // :/
   }
+  colorTitle(e);
+};
+
+let colorTitle = (e) => {
+  let x = e.clientX / 2000;
+  console.log(x);
+  document.getElementById('title').style.filter = `invert(${x})`;
 };
 
 //function that always runs on angel.js, 'glitches' out the angel logo based on probability
@@ -342,11 +355,13 @@ class App extends Component {
     this.getRandomFloat = getRandomFloat;
     this.moveLines = moveLines;
     this.glitchAngel = glitchAngel;
+    this.colorTitle = colorTitle;
   }
   render() {
     return (
-      <Fragment>
-        <div className="flex" onMouseMove={this.moveLines}>
+      <div className="flex-encapsulation">
+        <Title />
+        <div className="flex-logo-button" onMouseMove={this.moveLines}>
           <Button
             buttonArray={this.state.buttonArray1}
             className="button"
@@ -373,8 +388,7 @@ class App extends Component {
           getRandomFloat={this.getRandomFloat}
           styles={this.state.stylesArray}
         />
-        <Chyron />
-      </Fragment>
+      </div>
     );
   }
 }

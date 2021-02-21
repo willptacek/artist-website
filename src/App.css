@@ -3,10 +3,25 @@ body {
   overflow-x: hidden;
   position: fixed;
 }
-
-.flex {
+.flex-encapsulation {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  font-family: helvetica;
+  display: inline;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  color: yellow;
+  background-image: url('./components/img/chyronbackground.webp');
+}
+.flex-logo-button {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +35,7 @@ body {
 }
 #logo {
   display: block;
-  width: 45%;
+  width: 40%;
   z-index: 10;
 }
 .line {
@@ -32,18 +47,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  display: inline-block;
 }
 /* have mimi loves: off center to the left, then a looping of the stuff she loves in the middle */
 #chyron {
-  display: none;
+  background-image: url('./components/img/chyronbackground.webp');
   position: absolute;
-  top: 87%;
-  width: 100vw;
-  height: 10%;
-  background-color: black;
-  background-image: url('https://lite-images-i.scdn.co/image/ab67616d00001e023a364abd3772e6bca53b5ccd');
-  background-size: cover;
+  top: 92%;
+  left: 43%;
+}
+.loves {
+  font-family: Helvetica;
+  color: #85458a;
+  font-size: 2vw;
 }
 .button {
   display: flex;
@@ -75,7 +90,10 @@ body {
 }
 
 @media all and (max-width: 897px) {
-  .flex {
+  .flex-encapsulation {
+    flex-direction: column;
+  }
+  .flex-logo-button {
     flex-direction: column;
   }
   .button .icon {
@@ -83,15 +101,15 @@ body {
     margin: 1rem;
   }
   /* TODO: Make this slightly vary */
-  .flex #logo-and-lines-container .line:nth-child(3n + 3) {
+  #logo-and-lines-container .line:nth-child(3n + 3) {
     width: 60vw !important;
     height: 4px !important;
   }
-  .flex #logo-and-lines-container .line:nth-child(2n + 2) {
+  #logo-and-lines-container .line:nth-child(2n + 2) {
     width: 65vw !important;
     height: 2px !important;
   }
-  .flex #logo-and-lines-container .line:nth-child(5n + 5) {
+  #logo-and-lines-container .line:nth-child(5n + 5) {
     width: 70vw !important;
     height: 2px !important;
   }

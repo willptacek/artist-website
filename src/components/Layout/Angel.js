@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AngelImage from '../img/mmdethangel.png';
+import AngelImage from '../img/mmdethangel.webp';
 
 export class Angel extends Component {
   render() {
