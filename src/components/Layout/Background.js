@@ -8,13 +8,7 @@ export class Background extends Component {
     return (
       <div id="background-image-container">
         {this.props.images.map((image, index) => (
-          <Image
-            style={this.props.styles[index]}
-            src={image}
-            key={index}
-            // top={this.props.getRandomFloat(0, 60)}
-            // left={this.props.getRandomFloat(0, 60)}
-          />
+          <Image style={this.props.styles[index]} src={image} key={index} />
         ))}
       </div>
     );

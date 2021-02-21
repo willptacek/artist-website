@@ -313,41 +313,37 @@ class App extends Component {
       buttonArray1: [
         {
           icon: faSpotify,
-          link: 'https://open.spotify.com/artist/55VDe291360aWSrwt1U96m',
+          link: 'https://www.spotify.com/us/',
         },
         {
           icon: faSoundcloud,
-          link: 'https://soundcloud.com/mimideathh',
+          link: 'https://soundcloud.com',
         },
         {
           icon: faBandcamp,
-          link: 'https://mimideath.bandcamp.com/',
+          link: 'https://bandcamp.com/',
         },
         {
           icon: faApple,
-          link: 'https://music.apple.com/us/artist/mimideath/1502867449',
+          link: 'https://music.apple.com',
         },
-        // {
-        //   icon: faDeezer,
-        //   link: 'https://www.deezer.com/us/artist/88404592',
-        // },
       ],
       buttonArray2: [
         {
           icon: faTwitter,
-          link: 'https://twitter.com/MIMIDEATHH',
+          link: 'https://twitter.com',
         },
         {
           icon: faInstagram,
-          link: 'https://www.instagram.com/mimideathh/?hl=en',
+          link: 'https://www.instagram.com',
         },
         {
           icon: faYoutube,
-          link: 'https://www.youtube.com/channel/UC0keS6HcpWxhpsxPBWs7tWg',
+          link: 'https://www.youtube.com',
         },
         {
           icon: faEnvelope,
-          link: 'mailto:mgmtmimi@gmail.com',
+          link: 'mailto:willptacek@gmail.com',
         },
       ],
     };
