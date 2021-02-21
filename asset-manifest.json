@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mimideath/static/css/main.797cad14.chunk.css",
-    "main.js": "/mimideath/static/js/main.0cbcafbf.chunk.js",
-    "main.js.map": "/mimideath/static/js/main.0cbcafbf.chunk.js.map",
+    "main.css": "/mimideath/static/css/main.5274ece3.chunk.css",
+    "main.js": "/mimideath/static/js/main.1429d496.chunk.js",
+    "main.js.map": "/mimideath/static/js/main.1429d496.chunk.js.map",
     "runtime-main.js": "/mimideath/static/js/runtime-main.25e355f9.js",
     "runtime-main.js.map": "/mimideath/static/js/runtime-main.25e355f9.js.map",
     "static/js/2.1de46492.chunk.js": "/mimideath/static/js/2.1de46492.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.382f2a5a.chunk.js": "/mimideath/static/js/3.382f2a5a.chunk.js",
     "static/js/3.382f2a5a.chunk.js.map": "/mimideath/static/js/3.382f2a5a.chunk.js.map",
     "index.html": "/mimideath/index.html",
-    "static/css/main.797cad14.chunk.css.map": "/mimideath/static/css/main.797cad14.chunk.css.map",
+    "static/css/main.5274ece3.chunk.css.map": "/mimideath/static/css/main.5274ece3.chunk.css.map",
     "static/js/2.1de46492.chunk.js.LICENSE.txt": "/mimideath/static/js/2.1de46492.chunk.js.LICENSE.txt",
     "static/media/1.e58943ce.webp": "/mimideath/static/media/1.e58943ce.webp",
     "static/media/10.708af647.webp": "/mimideath/static/media/10.708af647.webp",
@@ -18,7 +18,6 @@
     "static/media/13.9df8d553.webp": "/mimideath/static/media/13.9df8d553.webp",
     "static/media/14.4876b4e2.webp": "/mimideath/static/media/14.4876b4e2.webp",
     "static/media/15.2587d02f.webp": "/mimideath/static/media/15.2587d02f.webp",
-    "static/media/16.9525be47.webp": "/mimideath/static/media/16.9525be47.webp",
     "static/media/18.5f85ce7c.webp": "/mimideath/static/media/18.5f85ce7c.webp",
     "static/media/19.0384847d.webp": "/mimideath/static/media/19.0384847d.webp",
     "static/media/2.25cb1ce2.webp": "/mimideath/static/media/2.25cb1ce2.webp",
@@ -37,12 +36,13 @@
     "static/media/9.f8f49490.webp": "/mimideath/static/media/9.f8f49490.webp",
     "static/media/buttonbackgroundtest.1c1f74d1.webp": "/mimideath/static/media/buttonbackgroundtest.1c1f74d1.webp",
     "static/media/buttonbackgroundtest2.fd3a0e02.webp": "/mimideath/static/media/buttonbackgroundtest2.fd3a0e02.webp",
-    "static/media/mmdethangel.0c1f1533.png": "/mimideath/static/media/mmdethangel.0c1f1533.png"
+    "static/media/App.css": "/mimideath/static/media/chyronbackground.e44b00d7.webp",
+    "static/media/mmdethangel.ff949ff8.webp": "/mimideath/static/media/mmdethangel.ff949ff8.webp"
   },
   "entrypoints": [
     "static/js/runtime-main.25e355f9.js",
     "static/js/2.1de46492.chunk.js",
-    "static/css/main.797cad14.chunk.css",
-    "static/js/main.0cbcafbf.chunk.js"
+    "static/css/main.5274ece3.chunk.css",
+    "static/js/main.1429d496.chunk.js"
   ]
 }
